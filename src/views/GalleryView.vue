@@ -1,6 +1,10 @@
 <template>
     <div class="gallery">
-
+        <ArtworkCard
+            v-for="artwork in artworks"
+            :key="artwork.id"
+            :artwork="artwork"
+        />
     </div>
 </template>
 <script setup>
