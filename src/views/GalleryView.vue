@@ -9,8 +9,8 @@
 </template>
 <script setup>
     import { ref, onMounted } from 'vue';
-    import {fetchArtworks} from '@/api/artworks';
-    import ArtworkCard from '@/components/ArtworkCard.vue';
+    import {fetchArtworks} from '../api/artworks.js';
+    import ArtworkCard from '../components/ArtworkCard.vue';
 
     const artworks = ref([]);
 
