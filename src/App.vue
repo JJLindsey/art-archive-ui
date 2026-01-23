@@ -3,8 +3,7 @@ import GalleryView from './views/GalleryView.vue';
 </script>
 
 <template>
-  <GalleryView />
-  Hello
+  <GalleryView />  
 </template>
 
 <style scoped>

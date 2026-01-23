@@ -1,10 +1,15 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://localhost:5000/api/artworks";
+const API_BASE_URL = "http://localhost:5139/api/artworks";
 
 export async function fetchArtworks() {
+    try {
     const response = await axios.get(API_BASE_URL);
     return response.data;
+    } catch (error) {
+        console.error("Error fetching artworks:", error);
+        return [];
+    }
 }
 
 export function getCertificateUrl(id) {

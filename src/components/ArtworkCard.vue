@@ -1,11 +1,15 @@
 <template>
     <div class="artwork-card">
-        <h3 class="artwork-title">{{ artwork.title }}</h3>
-        <p class="meta">{{ artwork.artist }} ({{ artwork.year }})</p>
+        <h3 class="artwork-title">Title: {{ artwork.title }}</h3>
+        <p class="meta">Artist: {{ artwork.artist }}</p>
+        <p class="meta">Year: {{ artwork.year }}</p>
+        <p class="meta">Medium: {{ artwork.medium }}</p>
 
-        <a href="certificateUrl" target="_blank">Download Certificate</a>
-
-        <qrcode-vue :value="certificateUrl" :size="120" />
+        <a :href="certificateUrl" target="_blank" download>Download Certificate</a>
+       
+        <div>
+            <qrcode-vue :value="certificateUrl" :size="120" />
+        </div>
     </div>
 </template>
 
@@ -15,13 +19,11 @@
     import { getCertificateUrl } from '../api/artworks.js';
 
     const props = defineProps({
-        artwork: {
-            type: Object,
-        }
+        artwork: Object
     });
 
     const certificateUrl = computed(() => {
-        getCertificateUrl(props.artwork.id);
+        return getCertificateUrl(props.artwork.id);
     })
 </script>
 
@@ -42,5 +44,15 @@
     .meta {
         color: #666;
         margin-bottom: 12px;
+    }
+    .certificate-btn {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 8px 16px;
+        background-color: #42b983;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
     }
 </style>
