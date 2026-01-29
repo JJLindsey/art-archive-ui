@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <h4 class="header">Art Archive & Provenance Tracker</h4>
         <div>
             <p class="title">Artwork Certificates</p>
         </div>
@@ -25,6 +26,11 @@
 </script>
 
 <style scoped>
+    .header {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
     .title {
         font-size: 24px;
         font-weight: bold;

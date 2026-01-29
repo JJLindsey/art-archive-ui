@@ -4,9 +4,11 @@
         <p class="meta">Artist: {{ artwork.artist }}</p>
         <p class="meta">Year: {{ artwork.year }}</p>
         <p class="meta">Medium: {{ artwork.medium }}</p>
-
-        <button class="certificate-btn" @click="showModal = true">View Certificate</button>
-        <div>
+        <p class="meta">Dimensions: {{ artwork.dimensions }}</p>
+        <div class="certificate-view">
+            <button class="certificate-btn" @click="showModal = true">View PDF Certificate</button>
+        </div>
+        <div class="qrcode">
             <qrcode-vue :value="certificateUrl" :size="120" />
         </div>
         <!--modal for pdf-->
@@ -42,12 +44,13 @@
 
 <style scoped>
     .artwork-card {
-        border: 2px solid #7c7c7c88;
+        border: 3px solid #e1e1e149;
         border-radius: 9px;
-        padding: 16px;
+        padding: 16px 20px;
         width: 300px;
-        background: #ffffff;
-        text-align: center;
+        background: #ffffe5;
+        box-shadow: 4.5px 9px 9px hsl(0deg 0% 0% / 0.30);
+        text-align: left;
     }
 
     .artwork-title {
@@ -56,18 +59,32 @@
     }
 
     .meta {
-        color: #2c2c2c;
-        margin-bottom: 12px;
+        color: #161616;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .certificate-view {
+        display: flex;
+        justify-content: center;
     }
     .certificate-btn {
-        margin-top: px;
-        margin-bottom: 12px;
+        margin-top: 8px;
+        margin-bottom: 16px;
         padding: 8px 16px;
-        background-color: #42b983;
+        background-color: #4248b9;
         color: white;
         border: none;
         cursor: pointer;
         text-decoration: none;
+    }
+    .certificate-btn:hover {
+        background-color: #d236ae;
+    }
+    .qrcode {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
     }
     .modal-overlay {
         position: fixed;
