@@ -1,10 +1,15 @@
 <template>
-    <div class="gallery">
-        <ArtworkCard
+    <div class="container">
+        <div>
+            <p class="title">Artwork Certificates</p>
+        </div>
+        <div class="gallery">
+            <ArtworkCard
             v-for="artwork in artworks"
             :key="artwork.id"
             :artwork="artwork"
         />
+        </div>
     </div>
 </template>
 <script setup>
@@ -20,6 +25,11 @@
 </script>
 
 <style scoped>
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
     .gallery {
         display: flex;
         gap: 16px;
