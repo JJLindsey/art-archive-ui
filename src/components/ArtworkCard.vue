@@ -1,5 +1,6 @@
 <template>
     <div class="artwork-card">
+        <h2 class="certificate-header">Artwork Certificate</h2>
         <h3 class="artwork-title">Title: {{ artwork.title }}</h3>
         <p class="meta">Artist: {{ artwork.artist }}</p>
         <p class="meta">Year: {{ artwork.year }}</p>
@@ -52,7 +53,9 @@
         box-shadow: 4.5px 9px 9px hsl(0deg 0% 0% / 0.30);
         text-align: left;
     }
-
+    .certificate-header {
+        text-align: center;
+    }
     .artwork-title {
         font-size: 18px;
         margin-bottom: 8px;
@@ -69,17 +72,43 @@
         justify-content: center;
     }
     .certificate-btn {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
         margin-top: 8px;
         margin-bottom: 16px;
         padding: 8px 16px;
         background-color: #4248b9;
+        box-shadow: 3px 4px 9px hsla(250, 100%, 14%, 0.3);
+        background-image: linear-gradient(
+        0deg,
+        rgba(94, 58, 238, 1) 0%,
+        rgba(197, 107, 240, 1) 100%
+        );
         color: white;
+        border-radius: 18px;
         border: none;
         cursor: pointer;
         text-decoration: none;
     }
     .certificate-btn:hover {
-        background-color: #d236ae;
+        background-image: none;
+        background-color: #cf009e;
+    }
+    .certificate-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(0deg, #cf009e 0%, #ff6bc1 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    }
+    .certificate-btn:hover::after {
+    opacity: 1;
     }
     .qrcode {
         display: flex;
