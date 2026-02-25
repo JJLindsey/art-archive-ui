@@ -31,6 +31,7 @@ Backend Repository: [art-archive-api](https://github.com/JJLindsey/art-archive-a
 - configure API endpoints in .env
 
 ### Project Structure
+```
 art-archive-frontend/
 ├── src/
 │   ├── components/
@@ -46,12 +47,13 @@ art-archive-frontend/
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+```
 ### CORS Requirements
 The backend API must be configured to allow requests from your frontend origin. See the backend repository for CORS configuration details.
 
 ### Architecture
 This frontend follows a separation of concerns architecture:
+```
 ┌─────────────────────┐
 │   Vue 3 Frontend    │
 │  (This Repository)  │
@@ -67,7 +69,7 @@ This frontend follows a separation of concerns architecture:
 ┌─────────────────────┐
 │   SQLite Database   │
 └─────────────────────┘
-
+```
 ### Benefits:
 
 - Independent deployment cycles
@@ -77,10 +79,10 @@ This frontend follows a separation of concerns architecture:
 - Scalable architecture
 
 ### Artwork Collection View
-<img src="public/cardScreen.png" alt="screen shot of artwork card" width="250">
+<img src="cardScreen.png" alt="screen shot of artwork card" width="250">
 
 ### Certificate Modal with PDF Viewer
-<img src="public/generatedPDFscreen.png" alt="screen shot of generated pdf" width="250">
+<img src="generatedPDFscreen.png" alt="screen shot of generated pdf" width="250">
 
 #### License
 This project is licensed under the MIT License - see the LICENSE file for details.
