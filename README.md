@@ -88,3 +88,6 @@ This frontend follows a separation of concerns architecture:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ### Contact
+If you have any questions, reach out to me on Git Hub https://github.com/JJLindsey, or send me a message jlindsey010@gmail.com.
+
+©Jennifer Lindsey 2026
