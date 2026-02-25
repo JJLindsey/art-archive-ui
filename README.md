@@ -82,7 +82,7 @@ This frontend follows a separation of concerns architecture:
 <img src="public/cardScreen.png" alt="screen shot of artwork card" width="250">
 
 ### Certificate Modal with PDF Viewer
-<img src="generatedPDFscreen.png" alt="screen shot of generated pdf" width="250">
+<img src="public/generatedPDFscreen.png" alt="screen shot of generated pdf" width="250">
 
 #### License
 This project is licensed under the MIT License - see the LICENSE file for details.
