@@ -73,7 +73,6 @@
     }
     .certificate-btn {
         position: relative;
-        z-index: 1;
         overflow: hidden;
         margin-top: 8px;
         margin-bottom: 16px;
@@ -102,7 +101,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+
     background-image: linear-gradient(0deg, #cf009e 0%, #ff6bc1 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -117,6 +116,7 @@
     }
     .modal-overlay {
         position: fixed;
+        z-index: 9999;
         top: 0;
         left: 0;
         width: 100%;
