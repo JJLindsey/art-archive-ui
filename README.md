@@ -79,7 +79,7 @@ This frontend follows a separation of concerns architecture:
 - Scalable architecture
 
 ### Artwork Collection View
-<img src="cardScreen.png" alt="screen shot of artwork card" width="250">
+<img src="public/cardScreen.pngcardScreen.png" alt="screen shot of artwork card" width="250">
 
 ### Certificate Modal with PDF Viewer
 <img src="generatedPDFscreen.png" alt="screen shot of generated pdf" width="250">
